@@ -1,7 +1,7 @@
 import unittest as t
 
-from cyberpy.passwords import SimpleNumericPassword
-from cyberpy.exceptions import OnetimePasswordError
+from secrettunnel.passwords import SimpleNumericPassword
+from secrettunnel.exceptions import OnetimePasswordError
 
 
 class TestSimpleNumericPassword(t.TestCase):
@@ -15,8 +15,8 @@ class TestSimpleNumericPassword(t.TestCase):
     def test_cannot_generate_more_than_one_passwords(self):
         self.password_container.generate()
 
-        with self.assertRaisesRegexp(OnetimePasswordError,
-                                     'already generated'):
+        with self.assertRaisesRegex(OnetimePasswordError,
+                                    'already generated'):
             self.password_container.generate()
 
     def test_validates_password(self):

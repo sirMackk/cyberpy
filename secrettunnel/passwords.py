@@ -1,6 +1,6 @@
 from random import randint
 
-from cyberpy.exceptions import OnetimePasswordError
+from secrettunnel.exceptions import OnetimePasswordError
 
 
 class AbstractOnetimePassword:
